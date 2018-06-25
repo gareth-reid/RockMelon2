@@ -1,0 +1,18 @@
+﻿@using RockMelon.Site.Models
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+ <div class="span12"><br/>
+    <div id="content-section">
+        @{ Html.RenderAction("Edit", new RecipeModel()); }
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        InitWysi();
+    });
+    
+</script>

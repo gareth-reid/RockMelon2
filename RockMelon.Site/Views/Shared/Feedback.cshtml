@@ -1,0 +1,32 @@
+﻿
+@model RockMelon.Site.Models.FeedbackModel
+
+@if((Model.PageId ?? 0) > 0)
+            {
+                <p><i><b>Comments</b></i>
+                    <textarea id="txtFeedback" rows="6" style="width:100%" ></textarea>
+                    <input type="button" id="btnfeedback" value="Submit"/>
+                </p>
+            }
+
+    @foreach (var fb in Model.FeedbackItems)
+    {
+        <p>@fb.Description <hr/></p>
+    }
+
+<script>
+    $('#btnfeedback').click(function () {
+        $.ajax({
+            url: '@Url.Action("SaveFeedBack", "Shared")',
+            type: "post",
+            data:
+                {
+                    text: $("#txtFeedback").val(),
+                    pageId: '@Model.PageId'
+                },
+            success: function () {
+                alert("Thanks");
+            },
+        });
+    });
+</script>

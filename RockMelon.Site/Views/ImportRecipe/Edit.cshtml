@@ -1,0 +1,22 @@
+﻿@model RockMelon.Site.Models.RecipeModel
+
+@Html.ValidationSummary(true, "Please correct the errors and try again.", new { @class = "alert-error" })
+@using (Html.BeginForm("Save", "ImportRecipe", FormMethod.Post, new { @id = "edit-content", @class = "form-horizontal" }))
+{
+    @Html.HiddenFor(m => m.Id)
+    <!--Edit-->
+    <div class="span4">
+        @Html.LabelFor(m => m.RecipeName)
+        @Html.EditorFor(m => m.RecipeName)
+    </div>
+   
+    <div class="span9">
+        <label class="control-label" for="recipeContent"></label>
+        <textarea id="recipeContent" style="width: 90%;" rows="30" name="recipeContent" class="tinymce">@Model.RecipeContent</textarea>
+        
+        <div class="btn-toolbar">
+            <input class="btn" id="btnCancel" value="Close" />
+            <input class="btn" type="submit" value="Save"/>
+        </div>
+    </div>
+}

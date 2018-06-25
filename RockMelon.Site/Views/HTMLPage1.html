@@ -1,0 +1,67 @@
+﻿<html>
+    <head>
+
+
+<style>
+    .commands {
+    font-weight: bold;
+    font-style: italic;
+}
+/*Twitter bs overrides  */
+fieldset p {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+</style>
+        </head>
+<div class="span12">
+    <fieldset><legend><br />Set up your repository</legend>
+        <p>After creating your repository in BitBucket or Stash etc. follow the directions they give you</p>
+    </fieldset>
+    <fieldset><legend><br />Get latest code</legend>
+        <p ><b><em>git fetch</b></em></p>
+        <p>This gets all repositories form remote to your machine.</p>
+        <p> <img src="../../Content/Images/Information-icon.png" /> Does not merge into your repositories</p>
+    </fieldset>
+     <fieldset><legend><br />Update your master repository</legend>
+         <p ><b><em>git merge origin master</b></em></p>
+         <p>Merge changes from 2 into master</p>
+         <p><img src="../../Content/Images/Information-icon.png" /> Git Fetch and then Git Merge = Git pull </p>
+         <p>BUT pull always assumes master. If you are in a different branch this can be dangerous as it will try to merge into master still.</p>
+    </fieldset>
+     <fieldset><legend><br />Create a feature branch </legend>
+        <p ><b><em>git checkout –B myFeatureBranch</b></em></p>
+        <p>Create a new branch from the head of the current branch (in this case master)</p>
+         <p><img src="../../Content/Images/Information-icon.png" />you can create this from any commit .... ever</p>
+    </fieldset>
+     <fieldset><legend><br />Do work and commits</legend>
+        <p>My preference is to use Git Extensions to commit as it handles all the adds and is more visual for partial commits.</p>
+         <p>Otherwise use </p>
+         <p ><b><em>git add --all</b></em> (or some matching expression)</p>
+         <p ><b><em>it commit -m "commit message"</b></em></p>
+    </fieldset>
+     <fieldset><legend><br />Keep your branch up-to-date with master (if you want to)</legend>
+        <p ><b><em>git rebase master</b></em></p>
+        <p>Rebase/Merge from master (after completing 2 + 3 again) (can use <b><em>git merge master</b></em>) </p>
+        <b>Merge</b> and <b>Rebase</b> do the same thing i.e. merge all commits from the specified branch into the current one except, </p>
+        <p>Rebase groups all your commits together and shuffles them to the the top</p>
+        <p>Rebase can also "squash" all commits into one by using rebase -i (interactive rebase)</p>
+        <p> <img src="../../Content/Images/Information-icon.png" />Could be any branch, not just master</p>
+    </fieldset>
+    <fieldset><legend><br />Store your branch on remote (optional)</legend>
+       <p ><b><em>git push origin myFeatureBranch</b></em></p>
+        <p>If you want to store your branch at remote (long running feature branches for sharing or backing up)</p>
+    </fieldset>
+    <fieldset><legend><br />When ready to merge back into master</legend>
+        <p ><b><em>git checkout master</b></em></p>
+        <p ><b><em>git merge myFeatureBranch</b></em></p>
+        <p ><b><em>git branch -D myFeatureBranch</b></em> -delete branch (optional)</p>
+        <p ><b><em>git push origin :myFeatureBranch</b></em> -delete remote branch (optional)</p>
+    </fieldset>
+    <fieldset><legend><br />Push changes to remote master</legend>
+        <p ><b><em>Git push origin master</b></em></p>        
+    </fieldset>
+</div>
+
+            
+</html>

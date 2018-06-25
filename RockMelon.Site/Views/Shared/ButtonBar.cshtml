@@ -1,0 +1,22 @@
+﻿
+@model RockMelon.Site.Models.MainModel
+
+    
+        if (Model.CanEdit)
+        {
+            <a class="button-style" data-ajax="true" data-ajax-complete="InitWysi();" data-ajax-mode="replace" data-ajax-update="#content-section" href="/ContentManagement/Edit?pageId=@Model.SelectedPageId">Edit</a>
+            
+        }
+        if (Model.CanDelete)
+        {
+            @Html.ActionLink("Delete", "Delete", new { pageId = Model.SelectedPageId, Controller = "ImportRecipe" }, new { @class = "button-style", onclick = "return confirm('Are you sure you wish to delete this page?');" })
+        }
+        
+   
+
+    if (Model.CanAdd)
+    {
+        <a class="button-style" data-ajax="true" data-ajax-complete="InitWysi();" data-ajax-mode="replace" data-ajax-update="#content-section" href="/ContentManagement/Edit?pageId=0">Add new page</a>
+        @*Ajax.ActionLink("Add new page", "Edit", new { pageId = 0, Controller = "ContentManagement" }, new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "content-section", OnComplete = "InitWysi()" }, new { @class = "button-style" })*@
+    }
+

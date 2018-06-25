@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="gareth, reid, worth, a look, cricket, afl, astronomy, programming, developmenmt, c# .Net, MVC, bioinformatics, modelling,  git, workflow, IOC " />
+<meta name="description" content="Software development tips, sport blogs, astronomy and bioinformatics as seen by Gareth Reid @ViewBag.SearchWords" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rock Melon @ViewBag.Title	</title>
+
+<link href="~/Content/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/Libraries/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/Scripts/Libraries/jquery-ui-1.8.18.min.js" type="text/javascript"></script>
+<script src="~/Scripts/Libraries/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+<script src="~/Scripts/Views/Shared/Menu.js" type="text/javascript"></script>
+<script src="~/Scripts/Libraries/bootstrap.min.js" type="text/javascript"></script>
+<script src="~/Scripts/Views/ImportRecipe/Wysi.js" type="text/javascript"></script>
+    
+
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shCore.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushBash.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushAS3.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushCSharp.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushCss.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushJScript.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushSql.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushVb.js" type="text/javascript"></script>
+<script src="~/Scripts/Plugins/tiny_mce/plugins/icode/javascript/shBrushXml.js" type="text/javascript"></script>
+<link href="~/Scripts/Plugins/tiny_mce/plugins/icode/css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="~/Scripts/Plugins/tiny_mce/plugins/icode/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '../Scripts/Plugins/tiny_mce/plugins/icode/javascript/clipboard.swf';
+     SyntaxHighlighter.all();
+</script>
+    
+</head>
+    <body>
+        
+       <div class="container">
+            <div class="span12" id="menu-holder">
+                @{ Html.RenderPartial("Menu"); }
+            </div> 
+        </div>
+        <div class="container">
+            <div id="footer-wrapper">
+                <div id="footer-content">
+                   
+                    <div id="fbox1">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Gareth Reid</p>
+        </div>
+    </body>
+</html>
+
+            
+

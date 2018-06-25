@@ -1,0 +1,36 @@
+﻿
+@using System.Web.Mvc.Html
+@using RockMelon
+@using RockMelon.Tools.Helpers
+
+@model RockMelon.Site.Models.MainModel
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row-fluid">
+
+   @* <div class="span6">
+        <div class="span3" id="menu-holder">
+            @{ Html.RenderPartial("Menu", Model); }
+        </div>  
+        <div class="span12">
+                @if (Model.SearchResults != null && Model.SearchResults.Any())
+                {
+                    foreach (var p in Model.SearchResults)
+                    {
+                        <a href="@Url.Action("loadPage", "Home")?pageId=@p.Id">
+                            <fieldset><legend>@p.PageTitle</legend>
+                                @Html.Raw(p.PageContent.Substring(0, p.PageContent.Length > 200 ? 200 : p.PageContent.Length))
+                                ..........
+                           
+                            </fieldset>
+                        </a>
+                    }
+                }
+        
+            </div> 
+    </div>*@
+   
+</div>
+
+   

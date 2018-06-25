@@ -1,0 +1,33 @@
+﻿
+@using System.Web.Mvc.Html
+@using RockMelon
+@using RockMelon.Tools.Helpers
+
+@model RockMelon.Site.Models.MainModel
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row-fluid">
+
+     
+    
+        <div class="span12">
+            @*@Html.Message(Model.Message)*@
+        </div> 
+        <div class="span12" id="button-bar" align="left">
+            @*@{ Html.RenderPartial("ButtonBar", Model); }*@
+        </div>
+       
+        
+    
+    </div>
+   
+
+
+<script>
+    $("#search").keypress(function (e) {
+        var enterKey = 13;
+        if (e.which == enterKey)
+            $(this).closest("form").submit();
+    });
+</script>
